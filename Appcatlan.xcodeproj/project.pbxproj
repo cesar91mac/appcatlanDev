@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		833C34E8189B00BA00E82B1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34E7189B00BA00E82B1E /* Foundation.framework */; };
+		833C34EA189B00BA00E82B1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34E9189B00BA00E82B1E /* CoreGraphics.framework */; };
+		833C34EC189B00BA00E82B1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34EB189B00BA00E82B1E /* UIKit.framework */; };
+		833C34EE189B00BA00E82B1E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34ED189B00BA00E82B1E /* CoreData.framework */; };
+		833C34F4189B00BA00E82B1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 833C34F2189B00BA00E82B1E /* InfoPlist.strings */; };
+		833C34F6189B00BA00E82B1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C34F5189B00BA00E82B1E /* main.m */; };
+		833C34FA189B00BA00E82B1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C34F9189B00BA00E82B1E /* AppDelegate.m */; };
+		833C34FD189B00BA00E82B1E /* Appcatlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 833C34FB189B00BA00E82B1E /* Appcatlan.xcdatamodeld */; };
+		833C34FF189B00BA00E82B1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 833C34FE189B00BA00E82B1E /* Images.xcassets */; };
+		833C3506189B00BA00E82B1E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C3505189B00BA00E82B1E /* XCTest.framework */; };
+		833C3507189B00BA00E82B1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34E7189B00BA00E82B1E /* Foundation.framework */; };
+		833C3508189B00BA00E82B1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34EB189B00BA00E82B1E /* UIKit.framework */; };
+		833C3509189B00BA00E82B1E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34ED189B00BA00E82B1E /* CoreData.framework */; };
+		833C3511189B00BA00E82B1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 833C350F189B00BA00E82B1E /* InfoPlist.strings */; };
+		833C3513189B00BA00E82B1E /* AppcatlanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C3512189B00BA00E82B1E /* AppcatlanTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		833C350A189B00BA00E82B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 833C34DC189B00BA00E82B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 833C34E3189B00BA00E82B1E;
+			remoteInfo = Appcatlan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		833C34E4189B00BA00E82B1E /* Appcatlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appcatlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		833C34E7189B00BA00E82B1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		833C34E9189B00BA00E82B1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		833C34EB189B00BA00E82B1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		833C34ED189B00BA00E82B1E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		833C34F1189B00BA00E82B1E /* Appcatlan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Appcatlan-Info.plist"; sourceTree = "<group>"; };
+		833C34F3189B00BA00E82B1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		833C34F5189B00BA00E82B1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		833C34F7189B00BA00E82B1E /* Appcatlan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Appcatlan-Prefix.pch"; sourceTree = "<group>"; };
+		833C34F8189B00BA00E82B1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		833C34F9189B00BA00E82B1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		833C34FC189B00BA00E82B1E /* Appcatlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Appcatlan.xcdatamodel; sourceTree = "<group>"; };
+		833C34FE189B00BA00E82B1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		833C3504189B00BA00E82B1E /* AppcatlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppcatlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		833C3505189B00BA00E82B1E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		833C350E189B00BA00E82B1E /* AppcatlanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppcatlanTests-Info.plist"; sourceTree = "<group>"; };
+		833C3510189B00BA00E82B1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		833C3512189B00BA00E82B1E /* AppcatlanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppcatlanTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		833C34E1189B00BA00E82B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833C34EA189B00BA00E82B1E /* CoreGraphics.framework in Frameworks */,
+				833C34EE189B00BA00E82B1E /* CoreData.framework in Frameworks */,
+				833C34EC189B00BA00E82B1E /* UIKit.framework in Frameworks */,
+				833C34E8189B00BA00E82B1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833C3501189B00BA00E82B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833C3506189B00BA00E82B1E /* XCTest.framework in Frameworks */,
+				833C3509189B00BA00E82B1E /* CoreData.framework in Frameworks */,
+				833C3508189B00BA00E82B1E /* UIKit.framework in Frameworks */,
+				833C3507189B00BA00E82B1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		833C34DB189B00BA00E82B1E = {
+			isa = PBXGroup;
+			children = (
+				833C34EF189B00BA00E82B1E /* Appcatlan */,
+				833C350C189B00BA00E82B1E /* AppcatlanTests */,
+				833C34E6189B00BA00E82B1E /* Frameworks */,
+				833C34E5189B00BA00E82B1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		833C34E5189B00BA00E82B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				833C34E4189B00BA00E82B1E /* Appcatlan.app */,
+				833C3504189B00BA00E82B1E /* AppcatlanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		833C34E6189B00BA00E82B1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				833C34E7189B00BA00E82B1E /* Foundation.framework */,
+				833C34E9189B00BA00E82B1E /* CoreGraphics.framework */,
+				833C34EB189B00BA00E82B1E /* UIKit.framework */,
+				833C34ED189B00BA00E82B1E /* CoreData.framework */,
+				833C3505189B00BA00E82B1E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		833C34EF189B00BA00E82B1E /* Appcatlan */ = {
+			isa = PBXGroup;
+			children = (
+				833C34F8189B00BA00E82B1E /* AppDelegate.h */,
+				833C34F9189B00BA00E82B1E /* AppDelegate.m */,
+				833C34FE189B00BA00E82B1E /* Images.xcassets */,
+				833C34FB189B00BA00E82B1E /* Appcatlan.xcdatamodeld */,
+				833C34F0189B00BA00E82B1E /* Supporting Files */,
+			);
+			path = Appcatlan;
+			sourceTree = "<group>";
+		};
+		833C34F0189B00BA00E82B1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				833C34F1189B00BA00E82B1E /* Appcatlan-Info.plist */,
+				833C34F2189B00BA00E82B1E /* InfoPlist.strings */,
+				833C34F5189B00BA00E82B1E /* main.m */,
+				833C34F7189B00BA00E82B1E /* Appcatlan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		833C350C189B00BA00E82B1E /* AppcatlanTests */ = {
+			isa = PBXGroup;
+			children = (
+				833C3512189B00BA00E82B1E /* AppcatlanTests.m */,
+				833C350D189B00BA00E82B1E /* Supporting Files */,
+			);
+			path = AppcatlanTests;
+			sourceTree = "<group>";
+		};
+		833C350D189B00BA00E82B1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				833C350E189B00BA00E82B1E /* AppcatlanTests-Info.plist */,
+				833C350F189B00BA00E82B1E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		833C34E3189B00BA00E82B1E /* Appcatlan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833C3516189B00BA00E82B1E /* Build configuration list for PBXNativeTarget "Appcatlan" */;
+			buildPhases = (
+				833C34E0189B00BA00E82B1E /* Sources */,
+				833C34E1189B00BA00E82B1E /* Frameworks */,
+				833C34E2189B00BA00E82B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Appcatlan;
+			productName = Appcatlan;
+			productReference = 833C34E4189B00BA00E82B1E /* Appcatlan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		833C3503189B00BA00E82B1E /* AppcatlanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833C3519189B00BA00E82B1E /* Build configuration list for PBXNativeTarget "AppcatlanTests" */;
+			buildPhases = (
+				833C3500189B00BA00E82B1E /* Sources */,
+				833C3501189B00BA00E82B1E /* Frameworks */,
+				833C3502189B00BA00E82B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				833C350B189B00BA00E82B1E /* PBXTargetDependency */,
+			);
+			name = AppcatlanTests;
+			productName = AppcatlanTests;
+			productReference = 833C3504189B00BA00E82B1E /* AppcatlanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		833C34DC189B00BA00E82B1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = LADEMO;
+				TargetAttributes = {
+					833C3503189B00BA00E82B1E = {
+						TestTargetID = 833C34E3189B00BA00E82B1E;
+					};
+				};
+			};
+			buildConfigurationList = 833C34DF189B00BA00E82B1E /* Build configuration list for PBXProject "Appcatlan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 833C34DB189B00BA00E82B1E;
+			productRefGroup = 833C34E5189B00BA00E82B1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				833C34E3189B00BA00E82B1E /* Appcatlan */,
+				833C3503189B00BA00E82B1E /* AppcatlanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		833C34E2189B00BA00E82B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833C34F4189B00BA00E82B1E /* InfoPlist.strings in Resources */,
+				833C34FF189B00BA00E82B1E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833C3502189B00BA00E82B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833C3511189B00BA00E82B1E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		833C34E0189B00BA00E82B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833C34FA189B00BA00E82B1E /* AppDelegate.m in Sources */,
+				833C34FD189B00BA00E82B1E /* Appcatlan.xcdatamodeld in Sources */,
+				833C34F6189B00BA00E82B1E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833C3500189B00BA00E82B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833C3513189B00BA00E82B1E /* AppcatlanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		833C350B189B00BA00E82B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 833C34E3189B00BA00E82B1E /* Appcatlan */;
+			targetProxy = 833C350A189B00BA00E82B1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		833C34F2189B00BA00E82B1E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				833C34F3189B00BA00E82B1E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		833C350F189B00BA00E82B1E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				833C3510189B00BA00E82B1E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		833C3514189B00BA00E82B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		833C3515189B00BA00E82B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		833C3517189B00BA00E82B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Appcatlan/Appcatlan-Prefix.pch";
+				INFOPLIST_FILE = "Appcatlan/Appcatlan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		833C3518189B00BA00E82B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Appcatlan/Appcatlan-Prefix.pch";
+				INFOPLIST_FILE = "Appcatlan/Appcatlan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		833C351A189B00BA00E82B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Appcatlan.app/Appcatlan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Appcatlan/Appcatlan-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AppcatlanTests/AppcatlanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		833C351B189B00BA00E82B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Appcatlan.app/Appcatlan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Appcatlan/Appcatlan-Prefix.pch";
+				INFOPLIST_FILE = "AppcatlanTests/AppcatlanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		833C34DF189B00BA00E82B1E /* Build configuration list for PBXProject "Appcatlan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833C3514189B00BA00E82B1E /* Debug */,
+				833C3515189B00BA00E82B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		833C3516189B00BA00E82B1E /* Build configuration list for PBXNativeTarget "Appcatlan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833C3517189B00BA00E82B1E /* Debug */,
+				833C3518189B00BA00E82B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		833C3519189B00BA00E82B1E /* Build configuration list for PBXNativeTarget "AppcatlanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833C351A189B00BA00E82B1E /* Debug */,
+				833C351B189B00BA00E82B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		833C34FB189B00BA00E82B1E /* Appcatlan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				833C34FC189B00BA00E82B1E /* Appcatlan.xcdatamodel */,
+			);
+			currentVersion = 833C34FC189B00BA00E82B1E /* Appcatlan.xcdatamodel */;
+			path = Appcatlan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 833C34DC189B00BA00E82B1E /* Project object */;
+}
