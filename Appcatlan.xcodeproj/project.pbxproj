@@ -22,6 +22,12 @@
 		833C3509189B00BA00E82B1E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C34ED189B00BA00E82B1E /* CoreData.framework */; };
 		833C3511189B00BA00E82B1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 833C350F189B00BA00E82B1E /* InfoPlist.strings */; };
 		833C3513189B00BA00E82B1E /* AppcatlanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C3512189B00BA00E82B1E /* AppcatlanTests.m */; };
+		833C351D189B00FF00E82B1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833C351C189B00FF00E82B1E /* Main.storyboard */; };
+		833C3520189B032B00E82B1E /* FeedSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C351F189B032B00E82B1E /* FeedSourcesViewController.m */; };
+		833C3528189B101F00E82B1E /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C3527189B101F00E82B1E /* FeedCell.m */; };
+		833C352C189B115D00E82B1E /* FeedItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C352B189B115D00E82B1E /* FeedItemsViewController.m */; };
+		833C352F189B1F8000E82B1E /* AreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C352E189B1F8000E82B1E /* AreaCell.m */; };
+		833C3531189B2B4B00E82B1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C3530189B2B4B00E82B1E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,16 @@
 		833C350E189B00BA00E82B1E /* AppcatlanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppcatlanTests-Info.plist"; sourceTree = "<group>"; };
 		833C3510189B00BA00E82B1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		833C3512189B00BA00E82B1E /* AppcatlanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppcatlanTests.m; sourceTree = "<group>"; };
+		833C351C189B00FF00E82B1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		833C351E189B032B00E82B1E /* FeedSourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedSourcesViewController.h; sourceTree = "<group>"; };
+		833C351F189B032B00E82B1E /* FeedSourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedSourcesViewController.m; sourceTree = "<group>"; };
+		833C3526189B101F00E82B1E /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		833C3527189B101F00E82B1E /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		833C352A189B115D00E82B1E /* FeedItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemsViewController.h; sourceTree = "<group>"; };
+		833C352B189B115D00E82B1E /* FeedItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemsViewController.m; sourceTree = "<group>"; };
+		833C352D189B1F8000E82B1E /* AreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaCell.h; sourceTree = "<group>"; };
+		833C352E189B1F8000E82B1E /* AreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaCell.m; sourceTree = "<group>"; };
+		833C3530189B2B4B00E82B1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833C3531189B2B4B00E82B1E /* MapKit.framework in Frameworks */,
 				833C34EA189B00BA00E82B1E /* CoreGraphics.framework in Frameworks */,
 				833C34EE189B00BA00E82B1E /* CoreData.framework in Frameworks */,
 				833C34EC189B00BA00E82B1E /* UIKit.framework in Frameworks */,
@@ -103,6 +120,7 @@
 		833C34E6189B00BA00E82B1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				833C3530189B2B4B00E82B1E /* MapKit.framework */,
 				833C34E7189B00BA00E82B1E /* Foundation.framework */,
 				833C34E9189B00BA00E82B1E /* CoreGraphics.framework */,
 				833C34EB189B00BA00E82B1E /* UIKit.framework */,
@@ -117,8 +135,11 @@
 			children = (
 				833C34F8189B00BA00E82B1E /* AppDelegate.h */,
 				833C34F9189B00BA00E82B1E /* AppDelegate.m */,
-				833C34FE189B00BA00E82B1E /* Images.xcassets */,
+				833C351C189B00FF00E82B1E /* Main.storyboard */,
 				833C34FB189B00BA00E82B1E /* Appcatlan.xcdatamodeld */,
+				833C3529189B102200E82B1E /* Custom Cells */,
+				833C3521189B03C900E82B1E /* Feed */,
+				833C34FE189B00BA00E82B1E /* Images.xcassets */,
 				833C34F0189B00BA00E82B1E /* Supporting Files */,
 			);
 			path = Appcatlan;
@@ -151,6 +172,28 @@
 				833C350F189B00BA00E82B1E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		833C3521189B03C900E82B1E /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				833C351E189B032B00E82B1E /* FeedSourcesViewController.h */,
+				833C351F189B032B00E82B1E /* FeedSourcesViewController.m */,
+				833C352A189B115D00E82B1E /* FeedItemsViewController.h */,
+				833C352B189B115D00E82B1E /* FeedItemsViewController.m */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		833C3529189B102200E82B1E /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				833C3526189B101F00E82B1E /* FeedCell.h */,
+				833C3527189B101F00E82B1E /* FeedCell.m */,
+				833C352D189B1F8000E82B1E /* AreaCell.h */,
+				833C352E189B1F8000E82B1E /* AreaCell.m */,
+			);
+			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833C351D189B00FF00E82B1E /* Main.storyboard in Resources */,
 				833C34F4189B00BA00E82B1E /* InfoPlist.strings in Resources */,
 				833C34FF189B00BA00E82B1E /* Images.xcassets in Resources */,
 			);
@@ -248,7 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833C352F189B1F8000E82B1E /* AreaCell.m in Sources */,
 				833C34FA189B00BA00E82B1E /* AppDelegate.m in Sources */,
+				833C352C189B115D00E82B1E /* FeedItemsViewController.m in Sources */,
+				833C3528189B101F00E82B1E /* FeedCell.m in Sources */,
+				833C3520189B032B00E82B1E /* FeedSourcesViewController.m in Sources */,
 				833C34FD189B00BA00E82B1E /* Appcatlan.xcdatamodeld in Sources */,
 				833C34F6189B00BA00E82B1E /* main.m in Sources */,
 			);
