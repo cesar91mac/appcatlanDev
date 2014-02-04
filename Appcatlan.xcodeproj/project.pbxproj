@@ -28,6 +28,8 @@
 		833C352C189B115D00E82B1E /* FeedItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C352B189B115D00E82B1E /* FeedItemsViewController.m */; };
 		833C352F189B1F8000E82B1E /* AreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C352E189B1F8000E82B1E /* AreaCell.m */; };
 		833C3531189B2B4B00E82B1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C3530189B2B4B00E82B1E /* MapKit.framework */; };
+		BA7BC23118A06AED00A743CD /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC23018A06AED00A743CD /* MapViewController.m */; };
+		BA7BC23418A06E7700A743CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7BC23318A06E7700A743CD /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,9 @@
 		833C352D189B1F8000E82B1E /* AreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaCell.h; sourceTree = "<group>"; };
 		833C352E189B1F8000E82B1E /* AreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaCell.m; sourceTree = "<group>"; };
 		833C3530189B2B4B00E82B1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BA7BC22F18A06AED00A743CD /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		BA7BC23018A06AED00A743CD /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		BA7BC23318A06E7700A743CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7BC23418A06E7700A743CD /* CoreLocation.framework in Frameworks */,
 				833C3531189B2B4B00E82B1E /* MapKit.framework in Frameworks */,
 				833C34EA189B00BA00E82B1E /* CoreGraphics.framework in Frameworks */,
 				833C34EE189B00BA00E82B1E /* CoreData.framework in Frameworks */,
@@ -120,6 +126,7 @@
 		833C34E6189B00BA00E82B1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA7BC23318A06E7700A743CD /* CoreLocation.framework */,
 				833C3530189B2B4B00E82B1E /* MapKit.framework */,
 				833C34E7189B00BA00E82B1E /* Foundation.framework */,
 				833C34E9189B00BA00E82B1E /* CoreGraphics.framework */,
@@ -136,6 +143,7 @@
 				833C34F8189B00BA00E82B1E /* AppDelegate.h */,
 				833C34F9189B00BA00E82B1E /* AppDelegate.m */,
 				833C351C189B00FF00E82B1E /* Main.storyboard */,
+				BA7BC23218A06C5B00A743CD /* Map */,
 				833C34FB189B00BA00E82B1E /* Appcatlan.xcdatamodeld */,
 				833C3529189B102200E82B1E /* Custom Cells */,
 				833C3521189B03C900E82B1E /* Feed */,
@@ -194,6 +202,15 @@
 				833C352E189B1F8000E82B1E /* AreaCell.m */,
 			);
 			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		BA7BC23218A06C5B00A743CD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BA7BC22F18A06AED00A743CD /* MapViewController.h */,
+				BA7BC23018A06AED00A743CD /* MapViewController.m */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +312,7 @@
 				833C352F189B1F8000E82B1E /* AreaCell.m in Sources */,
 				833C34FA189B00BA00E82B1E /* AppDelegate.m in Sources */,
 				833C352C189B115D00E82B1E /* FeedItemsViewController.m in Sources */,
+				BA7BC23118A06AED00A743CD /* MapViewController.m in Sources */,
 				833C3528189B101F00E82B1E /* FeedCell.m in Sources */,
 				833C3520189B032B00E82B1E /* FeedSourcesViewController.m in Sources */,
 				833C34FD189B00BA00E82B1E /* Appcatlan.xcdatamodeld in Sources */,
@@ -499,6 +517,7 @@
 				833C3518189B00BA00E82B1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		833C3519189B00BA00E82B1E /* Build configuration list for PBXNativeTarget "AppcatlanTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +526,7 @@
 				833C351B189B00BA00E82B1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
