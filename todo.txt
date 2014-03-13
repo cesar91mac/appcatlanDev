@@ -1,0 +1,9 @@
+---Implementar feed
+	-Investigar e implementar parsing XML
+	-Integrar redes sociales
+		-Twitter
+		-Facebook
+		-Instagram
+		-Youtube
+
+

@@ -7,7 +7,7 @@
 //
 
 #import "FeedSourcesViewController.h"
-
+#import "TwitterHelper.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -27,13 +27,54 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    NSLog(@"euqpeurpqo");
+    
     self.sources = @[@[@"Acatlán Oficial",@"Facebook",@"Twitter",@"Instagram",@"Youtube"],@[@"Noticias",@"Avisos",@"Deportes",@"Difusión Cultural"]];
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+       
+        //NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.acatlan.unam.mx/JSON"]];
+        
+       /* NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://sulisu.co/rss/"]];
+        
+        NSLog(@"%@",data);
+        
+        NSError *error;
+        
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+        
+        
+        NSLog(@"%@",jsonData);*/
+    });
+    
+
+ /*   NSURL *url = [[NSURL alloc] initWithString:@"http://sulisu.co/rss/"];
+ 
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (error) {
+            
+        } else {
+            
+            NSError *error;
+            
+            NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            
+            NSLog(@"%@",parsedObject);
+        }
+    }];*/
+    
+    
+    TwitterHelper *twitterHelper = [[TwitterHelper alloc] init];
+    
+    [twitterHelper fetchTimelineForUser:@"csrmc91"];
     
 
 }
-- (void)didReceiveMemoryWarning
-{
+
+
+- (void)didReceiveMemoryWarning{
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -49,7 +90,6 @@
     
     return sectionSources.count;
 }
-
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -104,7 +144,6 @@
     return cell;
     
 }
-
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     

@@ -30,6 +30,8 @@
 		833C3531189B2B4B00E82B1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C3530189B2B4B00E82B1E /* MapKit.framework */; };
 		BA7BC23118A06AED00A743CD /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC23018A06AED00A743CD /* MapViewController.m */; };
 		BA7BC23418A06E7700A743CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7BC23318A06E7700A743CD /* CoreLocation.framework */; };
+		BAE9525518BFFB2800188D36 /* TwitterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9525418BFFB2800188D36 /* TwitterHelper.m */; };
+		BAFFC91E18C93A1C00EE46EE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFFC91D18C93A1C00EE46EE /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		BA7BC22F18A06AED00A743CD /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		BA7BC23018A06AED00A743CD /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		BA7BC23318A06E7700A743CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BAE9525318BFFB2800188D36 /* TwitterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterHelper.h; sourceTree = "<group>"; };
+		BAE9525418BFFB2800188D36 /* TwitterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterHelper.m; sourceTree = "<group>"; };
+		BAFFC91D18C93A1C00EE46EE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFFC91E18C93A1C00EE46EE /* Social.framework in Frameworks */,
 				BA7BC23418A06E7700A743CD /* CoreLocation.framework in Frameworks */,
 				833C3531189B2B4B00E82B1E /* MapKit.framework in Frameworks */,
 				833C34EA189B00BA00E82B1E /* CoreGraphics.framework in Frameworks */,
@@ -126,6 +132,7 @@
 		833C34E6189B00BA00E82B1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAFFC91D18C93A1C00EE46EE /* Social.framework */,
 				BA7BC23318A06E7700A743CD /* CoreLocation.framework */,
 				833C3530189B2B4B00E82B1E /* MapKit.framework */,
 				833C34E7189B00BA00E82B1E /* Foundation.framework */,
@@ -143,6 +150,8 @@
 				833C34F8189B00BA00E82B1E /* AppDelegate.h */,
 				833C34F9189B00BA00E82B1E /* AppDelegate.m */,
 				833C351C189B00FF00E82B1E /* Main.storyboard */,
+				BAE9525318BFFB2800188D36 /* TwitterHelper.h */,
+				BAE9525418BFFB2800188D36 /* TwitterHelper.m */,
 				BA7BC23218A06C5B00A743CD /* Map */,
 				833C34FB189B00BA00E82B1E /* Appcatlan.xcdatamodeld */,
 				833C3529189B102200E82B1E /* Custom Cells */,
@@ -315,6 +324,7 @@
 				BA7BC23118A06AED00A743CD /* MapViewController.m in Sources */,
 				833C3528189B101F00E82B1E /* FeedCell.m in Sources */,
 				833C3520189B032B00E82B1E /* FeedSourcesViewController.m in Sources */,
+				BAE9525518BFFB2800188D36 /* TwitterHelper.m in Sources */,
 				833C34FD189B00BA00E82B1E /* Appcatlan.xcdatamodeld in Sources */,
 				833C34F6189B00BA00E82B1E /* main.m in Sources */,
 			);

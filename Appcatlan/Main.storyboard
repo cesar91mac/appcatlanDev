@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-14" y="966"/>
         </scene>
-        <!--Feed Sources View Controller - Root View Controller-->
+        <!--Feed Sources View Controller - Feed Acatlán-->
         <scene sceneID="hys-AY-1lw">
             <objects>
                 <tableViewController id="KZ3-0G-hRH" customClass="FeedSourcesViewController" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Zvm-Ue-QTR"/>
+                    <navigationItem key="navigationItem" title="Feed Acatlán" id="Zvm-Ue-QTR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCW-qX-DMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
