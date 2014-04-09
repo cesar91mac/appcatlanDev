@@ -8,6 +8,7 @@
 
 #import "FeedSourcesViewController.h"
 #import "TwitterHelper.h"
+#import "GDataXMLNode.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -25,49 +26,35 @@
 
 
 - (void)viewDidLoad{
+
     [super viewDidLoad];
-    
-    NSLog(@"euqpeurpqo");
     
     self.sources = @[@[@"Acatlán Oficial",@"Facebook",@"Twitter",@"Instagram",@"Youtube"],@[@"Noticias",@"Avisos",@"Deportes",@"Difusión Cultural"]];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
        
-        //NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.acatlan.unam.mx/JSON"]];
-        
-       /* NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://sulisu.co/rss/"]];
-        
-        NSLog(@"%@",data);
+        NSData *xmlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.acatlan.unam.mx/json"]];
         
         NSError *error;
         
-        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+        GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
         
+        NSArray *titles = [doc.rootElement elementsForName:@"pubDate"];
         
-        NSLog(@"%@",jsonData);*/
+        NSLog(@"%@",doc.rootElement);
+        
+        NSLog(@"%@",titles);
+        
+    
     });
     
 
- /*   NSURL *url = [[NSURL alloc] initWithString:@"http://sulisu.co/rss/"];
- 
-    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        
-        if (error) {
-            
-        } else {
-            
-            NSError *error;
-            
-            NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            
-            NSLog(@"%@",parsedObject);
-        }
-    }];*/
+
     
     
-    TwitterHelper *twitterHelper = [[TwitterHelper alloc] init];
-    
-    [twitterHelper fetchTimelineForUser:@"csrmc91"];
+//    TwitterHelper *twitterHelper = [[TwitterHelper alloc] init];
+//    
+//    [twitterHelper fetchTimelineForUser:@"csrmc91"];
     
 
 }
