@@ -31,6 +31,7 @@
 		BA6B3D1C18F5844800BA84AB /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B3D1B18F5844800BA84AB /* GDataXMLNode.m */; };
 		BA7BC23118A06AED00A743CD /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC23018A06AED00A743CD /* MapViewController.m */; };
 		BA7BC23418A06E7700A743CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7BC23318A06E7700A743CD /* CoreLocation.framework */; };
+		BA84044C18F72BB1004D6294 /* FESAcatlanRSSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA84044B18F72BB1004D6294 /* FESAcatlanRSSHelper.m */; };
 		BAE9525518BFFB2800188D36 /* TwitterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9525418BFFB2800188D36 /* TwitterHelper.m */; };
 		BAFFC91E18C93A1C00EE46EE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFFC91D18C93A1C00EE46EE /* Social.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 		BA7BC22F18A06AED00A743CD /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		BA7BC23018A06AED00A743CD /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		BA7BC23318A06E7700A743CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BA84044A18F72BB1004D6294 /* FESAcatlanRSSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FESAcatlanRSSHelper.h; sourceTree = "<group>"; };
+		BA84044B18F72BB1004D6294 /* FESAcatlanRSSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FESAcatlanRSSHelper.m; sourceTree = "<group>"; };
 		BAE9525318BFFB2800188D36 /* TwitterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterHelper.h; sourceTree = "<group>"; };
 		BAE9525418BFFB2800188D36 /* TwitterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterHelper.m; sourceTree = "<group>"; };
 		BAFFC91D18C93A1C00EE46EE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -153,8 +156,7 @@
 				833C34F8189B00BA00E82B1E /* AppDelegate.h */,
 				833C34F9189B00BA00E82B1E /* AppDelegate.m */,
 				833C351C189B00FF00E82B1E /* Main.storyboard */,
-				BAE9525318BFFB2800188D36 /* TwitterHelper.h */,
-				BAE9525418BFFB2800188D36 /* TwitterHelper.m */,
+				BA84044918F72B87004D6294 /* Helpers */,
 				BA6B3D1918F5843300BA84AB /* GDataXML */,
 				BA7BC23218A06C5B00A743CD /* Map */,
 				833C34FB189B00BA00E82B1E /* Appcatlan.xcdatamodeld */,
@@ -233,6 +235,17 @@
 				BA7BC23018A06AED00A743CD /* MapViewController.m */,
 			);
 			name = Map;
+			sourceTree = "<group>";
+		};
+		BA84044918F72B87004D6294 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BA84044A18F72BB1004D6294 /* FESAcatlanRSSHelper.h */,
+				BA84044B18F72BB1004D6294 /* FESAcatlanRSSHelper.m */,
+				BAE9525318BFFB2800188D36 /* TwitterHelper.h */,
+				BAE9525418BFFB2800188D36 /* TwitterHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +351,7 @@
 				833C3528189B101F00E82B1E /* FeedCell.m in Sources */,
 				833C3520189B032B00E82B1E /* FeedSourcesViewController.m in Sources */,
 				BAE9525518BFFB2800188D36 /* TwitterHelper.m in Sources */,
+				BA84044C18F72BB1004D6294 /* FESAcatlanRSSHelper.m in Sources */,
 				BA6B3D1C18F5844800BA84AB /* GDataXMLNode.m in Sources */,
 				833C34FD189B00BA00E82B1E /* Appcatlan.xcdatamodeld in Sources */,
 				833C34F6189B00BA00E82B1E /* main.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "FeedSourcesViewController.h"
 #import "TwitterHelper.h"
-#import "GDataXMLNode.h"
+#import "FESAcatlanRSSHelper.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -17,8 +17,6 @@
 @property (nonatomic, strong) NSArray *sources;
 
 @end
-
-
 
 
 
@@ -31,24 +29,8 @@
     
     self.sources = @[@[@"Acatlán Oficial",@"Facebook",@"Twitter",@"Instagram",@"Youtube"],@[@"Noticias",@"Avisos",@"Deportes",@"Difusión Cultural"]];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-       
-        NSData *xmlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.acatlan.unam.mx/json"]];
         
-        NSError *error;
-        
-        GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
-        
-        NSArray *titles = [doc.rootElement elementsForName:@"pubDate"];
-        
-        NSLog(@"%@",doc.rootElement);
-        
-        NSLog(@"%@",titles);
-        
-    
-    });
-    
-
+    [FESAcatlanRSSHelper getFESAcatlanRSS];
 
     
     
