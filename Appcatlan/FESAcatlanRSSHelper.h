@@ -10,6 +10,9 @@
 
 @interface FESAcatlanRSSHelper : NSObject
 
-+(void)getFESAcatlanRSS;
+
+
+
+-(void)getFESAcatlanRSSWithCompletionBlock:(void (^)(BOOL success, NSArray *rss))completionBlock;
 
 @end

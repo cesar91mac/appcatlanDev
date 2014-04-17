@@ -11,7 +11,12 @@
 
 @implementation FESAcatlanRSSHelper
 
-+(void)getFESAcatlanRSS{
+
+
+
+-(void)getFESAcatlanRSSWithCompletionBlock:(void (^)(BOOL success, NSArray *rss))completionBlock{
+
+   __block NSMutableArray *tempRSS = [NSMutableArray array];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -22,8 +27,6 @@
         GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
         
         NSArray *channels = [doc.rootElement elementsForName:@"channel"];
-        
-        NSLog(@"Channels %d",channels.count);
         
 
         
@@ -45,24 +48,39 @@
                 GDataXMLElement *pubDate = [[item elementsForName:@"pubDate"] lastObject];
                 
                 
-                NSLog(@"%@\n%@\n%@\n%@\n%@\n",title.stringValue,
-                                            [self stringFromParsedHTMLInGDataXMLElement:description],
-                                            [self stringFromParsedHTMLInGDataXMLElement:contentEncoded],
-                                            link.stringValue,
-                                            pubDate.stringValue);
+                
+                NSDictionary *rssElement = @{@"title": title.stringValue,
+                                             @"description":[self stringFromParsedHTMLInGDataXMLElement:description],
+                                             @"content":[self stringFromParsedHTMLInGDataXMLElement:contentEncoded],
+                                             @"link":link.stringValue,
+                                             @"pubDate":pubDate.stringValue};
+
+//                NSLog(@"%@\n%@\n%@\n%@\n%@\n",title.stringValue,
+//                                            [self stringFromParsedHTMLInGDataXMLElement:description],
+//                                            [self stringFromParsedHTMLInGDataXMLElement:contentEncoded],
+//                                            link.stringValue,
+//                                            pubDate.stringValue);
                 
             
+                [tempRSS addObject:rssElement];
                   
             }
         
             
         }
         
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            completionBlock(YES,tempRSS);
+        
+        });
+        
     });
 
 }
 
-+(NSString *)stringFromParsedHTMLInGDataXMLElement:(GDataXMLElement*)htmlElement{
+-(NSString *)stringFromParsedHTMLInGDataXMLElement:(GDataXMLElement*)htmlElement{
     
     NSString *structuredContent = [NSString stringWithFormat:@"<div>%@</div>",htmlElement.stringValue];
     
