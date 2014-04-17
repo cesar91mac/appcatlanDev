@@ -25,7 +25,7 @@
         
         NSLog(@"Channels %d",channels.count);
         
-        int i = 0;
+
         
         for (GDataXMLElement *channel in channels) {
             
@@ -33,57 +33,69 @@
             
             for (GDataXMLElement *item in items) {
                 
-              
-                if (i == 0) {
                     
-//                    GDataXMLElement *title = [[item elementsForName:@"title"] lastObject];
-//                    
-//                    GDataXMLElement *description = [[item elementsForName:@"description"] lastObject];
+                GDataXMLElement *title = [[item elementsForName:@"title"] lastObject];
+     
+                GDataXMLElement *description = [[item elementsForName:@"description"] lastObject];
                     
-                    GDataXMLElement *contentEncoded = [[item elementsForName:@"content:encoded"] lastObject];
+                GDataXMLElement *contentEncoded = [[item elementsForName:@"content:encoded"] lastObject];
                     
-                    NSLog(@"%@",contentEncoded.stringValue);
-                    
-//                    GDataXMLElement *link = [[item elementsForName:@"link"] lastObject];
-//                    
-//                    GDataXMLElement *pubDate = [[item elementsForName:@"pubDate"] lastObject];
-                    
-                    
-                    
-                    
-                    
-//                    NSString *pXpathQueryString = @"//Player";
-//                
-//                    
-//                    
-                    NSError *error = nil;
+                GDataXMLElement *link = [[item elementsForName:@"link"] lastObject];
                 
-                    
-                    GDataXMLElement *element = [[GDataXMLElement alloc] initWithXMLString:@"<p style=\"text-align:center;\"><img src=\"http://www.acatlan.unam.mx/imagenes/3244.jpg\" alt=\"\" width=\"300\" height=\"136\" />hola</p>" error:&error];
-                    
-                    if (error) {
-                        
-                        NSLog(@"Couldn`t create element");
-                    }
-                    
-                    NSLog(@"%@",element.stringValue);
-                    
-//                    NSArray *pObjects = [element nodesForXPath:pXpathQueryString error:nil];
-//                    
-//                    NSLog(@"%@",pObjects);
-
-                    
-                }
+                GDataXMLElement *pubDate = [[item elementsForName:@"pubDate"] lastObject];
                 
-                i++;
-                //NSLog(@"%@\n%@\n%@\n%@\n%@\n",title.stringValue,description.stringValue,contentEncoded.stringValue,link.stringValue,pubDate.stringValue);
                 
-            }
+                NSLog(@"%@\n%@\n%@\n%@\n%@\n",title.stringValue,
+                                            [self stringFromParsedHTMLInGDataXMLElement:description],
+                                            [self stringFromParsedHTMLInGDataXMLElement:contentEncoded],
+                                            link.stringValue,
+                                            pubDate.stringValue);
+                
             
+                  
+            }
+        
             
         }
         
     });
 
 }
+
++(NSString *)stringFromParsedHTMLInGDataXMLElement:(GDataXMLElement*)htmlElement{
+    
+    NSString *structuredContent = [NSString stringWithFormat:@"<div>%@</div>",htmlElement.stringValue];
+    
+    NSString *noBreakPointsContent = [structuredContent stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    
+    NSString *pXpathQueryString = @"//p";
+    
+    NSError *error = nil;
+    
+    GDataXMLDocument *docFromElement = [[GDataXMLDocument alloc] initWithXMLString:noBreakPointsContent options:0 error:&error];
+    
+    
+    if (error) {
+        
+        NSLog(@"Couldn`t create element");
+    }
+    
+    NSArray *pObjects = [docFromElement.rootElement nodesForXPath:pXpathQueryString error:nil];
+    
+    NSString *htmlContent = @"";
+    
+    for (GDataXMLElement *element in pObjects) {
+        
+        if (![element.stringValue isEqualToString:@""]) {
+            
+            htmlContent = [htmlContent stringByAppendingString:[NSString stringWithFormat:@" %@",element.stringValue]];
+            
+        }
+        
+        
+    }
+    
+    return htmlContent;
+}
+
 @end
