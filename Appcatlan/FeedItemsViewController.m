@@ -7,31 +7,39 @@
 //
 
 #import "FeedItemsViewController.h"
+#import "FESAcatlanRSSHelper.h"
+#import "FESAcatlanRSSItem.h"
 
 @interface FeedItemsViewController ()
 
+@property (nonatomic, strong) NSArray *rssItems;
+
 @end
 
-@implementation FeedItemsViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+@implementation FeedItemsViewController{
+    
+    FESAcatlanRSSHelper *fesAcatlanRSSHelper;
+    
 }
 
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   
+    fesAcatlanRSSHelper = [[FESAcatlanRSSHelper alloc] init];
+
+    [fesAcatlanRSSHelper getFESAcatlanRSSWithCompletionBlock:^(BOOL success, NSArray *rss) {
+        
+        NSLog(@"Finished Downloading");
+        
+        self.rssItems = [NSArray arrayWithArray:rss];
+        
+        [self.tableView reloadData];
+        
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,24 +50,27 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.rssItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"RSSCell";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    FESAcatlanRSSItem *rssItemAtIndex = [self.rssItems objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = rssItemAtIndex.title;
+    
+    cell.detailTextLabel.text = rssItemAtIndex.pubDate;
     
     // Configure the cell...
     

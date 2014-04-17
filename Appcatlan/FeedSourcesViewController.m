@@ -17,32 +17,18 @@
 @property (nonatomic, strong) NSArray *sources;
 
 
-
 @end
 
 
 
-@implementation FeedSourcesViewController{
-
-    FESAcatlanRSSHelper *fesAcatlanRSSHelper;
-
-}
+@implementation FeedSourcesViewController
 
 
 - (void)viewDidLoad{
 
     [super viewDidLoad];
     
-    fesAcatlanRSSHelper = [[FESAcatlanRSSHelper alloc] init];
-    
     self.sources = @[@[@"Acatlán Oficial",@"Facebook",@"Twitter",@"Instagram",@"Youtube"],@[@"Noticias",@"Avisos",@"Deportes",@"Difusión Cultural"]];
-    
-        
-    [fesAcatlanRSSHelper getFESAcatlanRSSWithCompletionBlock:^(BOOL success, NSArray *rss) {
-        
-        NSLog(@"Finished Downloading\n %@ ",rss);
-    }];
-
     
 //    TwitterHelper *twitterHelper = [[TwitterHelper alloc] init];
 //    

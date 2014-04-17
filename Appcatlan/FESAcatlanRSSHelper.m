@@ -8,7 +8,7 @@
 
 #import "FESAcatlanRSSHelper.h"
 #import "GDataXMLNode.h"
-
+#import "FESAcatlanRSSItem.h"
 @implementation FESAcatlanRSSHelper
 
 
@@ -49,20 +49,20 @@
                 
                 
                 
-                NSDictionary *rssElement = @{@"title": title.stringValue,
-                                             @"description":[self stringFromParsedHTMLInGDataXMLElement:description],
-                                             @"content":[self stringFromParsedHTMLInGDataXMLElement:contentEncoded],
-                                             @"link":link.stringValue,
-                                             @"pubDate":pubDate.stringValue};
+                
+                
+                FESAcatlanRSSItem *rssItem = [[FESAcatlanRSSItem alloc] initWithTitle:title.stringValue
+                                                                          Description:[self stringFromParsedHTMLInGDataXMLElement:description] Content:[self stringFromParsedHTMLInGDataXMLElement:contentEncoded] Link:link.stringValue PubDate:pubDate.stringValue];
+                
+//                NSDictionary *rssElement = @{@"title": title.stringValue,
+//                                             @"description":[self stringFromParsedHTMLInGDataXMLElement:description],
+//                                             @"content":[self stringFromParsedHTMLInGDataXMLElement:contentEncoded],
+//                                             @"link":link.stringValue,
+//                                             @"pubDate":pubDate.stringValue};
 
-//                NSLog(@"%@\n%@\n%@\n%@\n%@\n",title.stringValue,
-//                                            [self stringFromParsedHTMLInGDataXMLElement:description],
-//                                            [self stringFromParsedHTMLInGDataXMLElement:contentEncoded],
-//                                            link.stringValue,
-//                                            pubDate.stringValue);
                 
             
-                [tempRSS addObject:rssElement];
+                [tempRSS addObject:rssItem];
                   
             }
         
