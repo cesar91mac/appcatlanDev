@@ -11,5 +11,6 @@
 @interface RSSTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UIImageView *thumbnail;
 
 @end

@@ -21,6 +21,8 @@
     
     FESAcatlanRSSHelper *fesAcatlanRSSHelper;
     
+     __block NSMutableDictionary *thumbnails;
+    
 }
 
 
@@ -28,6 +30,7 @@
     
     [super viewDidLoad];
 
+    thumbnails = [NSMutableDictionary dictionary];
    
     fesAcatlanRSSHelper = [[FESAcatlanRSSHelper alloc] init];
 
@@ -71,8 +74,39 @@
     
     cell.title.text = rssItemAtIndex.title;
     
+    NSString *thumbnailKey = [NSString stringWithFormat:@"%d",indexPath.row];
+    
+    if ([thumbnails objectForKey:thumbnailKey]) {
+        
+        cell.thumbnail.image = thumbnails[thumbnailKey];
+        
+    }else{
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            NSURL *thumbnailURL = [NSURL URLWithString:[rssItemAtIndex.thumbnailsURLs lastObject]];
+            
+            __block NSData *thumbnailData;
+            
+            dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                thumbnailData = [NSData dataWithContentsOfURL:thumbnailURL];
+                
+                [thumbnails setObject:[UIImage imageWithData:thumbnailData] forKey:thumbnailKey];
+                
+                
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    
+                    cell.thumbnail.image = thumbnails[thumbnailKey];
+                    
+                });
+            });
+            
+        });
+    }
     
     
+
     // Configure the cell...
     
     return cell;
