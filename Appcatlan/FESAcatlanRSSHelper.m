@@ -49,10 +49,9 @@
                 
                 
                 
-                
-                
                 FESAcatlanRSSItem *rssItem = [[FESAcatlanRSSItem alloc] initWithTitle:title.stringValue
-                                                                          Description:[self stringFromParsedHTMLInGDataXMLElement:description] Content:[self stringFromParsedHTMLInGDataXMLElement:contentEncoded] Link:link.stringValue PubDate:pubDate.stringValue];
+                                                                          Description:[self stringFromParsedHTMLInGDataXMLElement:description ForXPath:@"//p"   ] Content:[self stringFromParsedHTMLInGDataXMLElement:contentEncoded ForXPath:@"//p"] Link:link.stringValue PubDate:pubDate.stringValue
+                                                                         AndThumbnailsURLs:[self urlsForThumbnailsFromParsedHTMLInGDataXMLElement:contentEncoded]];
                 
 //                NSDictionary *rssElement = @{@"title": title.stringValue,
 //                                             @"description":[self stringFromParsedHTMLInGDataXMLElement:description],
@@ -61,6 +60,8 @@
 //                                             @"pubDate":pubDate.stringValue};
 
                 
+                
+                [self stringFromParsedHTMLInGDataXMLElement:contentEncoded ForXPath:@"//img/@src"];
             
                 [tempRSS addObject:rssItem];
                   
@@ -80,13 +81,13 @@
 
 }
 
--(NSString *)stringFromParsedHTMLInGDataXMLElement:(GDataXMLElement*)htmlElement{
+-(NSString *)stringFromParsedHTMLInGDataXMLElement:(GDataXMLElement*)htmlElement ForXPath:(NSString*)XPath{
     
     NSString *structuredContent = [NSString stringWithFormat:@"<div>%@</div>",htmlElement.stringValue];
     
     NSString *noBreakPointsContent = [structuredContent stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    
-    NSString *pXpathQueryString = @"//p";
+
+
     
     NSError *error = nil;
     
@@ -98,7 +99,7 @@
         NSLog(@"Couldn`t create element");
     }
     
-    NSArray *pObjects = [docFromElement.rootElement nodesForXPath:pXpathQueryString error:nil];
+    NSArray *pObjects = [docFromElement.rootElement nodesForXPath:XPath error:nil];
     
     NSString *htmlContent = @"";
     
@@ -107,13 +108,46 @@
         if (![element.stringValue isEqualToString:@""]) {
             
             htmlContent = [htmlContent stringByAppendingString:[NSString stringWithFormat:@" %@",element.stringValue]];
-            
+  
         }
-        
         
     }
     
     return htmlContent;
 }
 
+
+-(NSArray *)urlsForThumbnailsFromParsedHTMLInGDataXMLElement:(GDataXMLElement*)htmlElement{
+    
+    NSMutableArray *thumbnailsURLs = [NSMutableArray array];
+    
+    NSString *structuredContent = [NSString stringWithFormat:@"<div>%@</div>",htmlElement.stringValue];
+    
+    NSString *noBreakPointsContent = [structuredContent stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    
+    
+    NSError *error = nil;
+    
+    GDataXMLDocument *docFromElement = [[GDataXMLDocument alloc] initWithXMLString:noBreakPointsContent options:0 error:&error];
+    
+    
+    if (error) {
+        
+        NSLog(@"Couldn`t create element");
+    }
+    
+    NSArray *pObjects = [docFromElement.rootElement nodesForXPath:@"//img/@src" error:nil];
+    
+    for (GDataXMLElement *element in pObjects) {
+        
+        if (![element.stringValue isEqualToString:@""]) {
+            
+            [thumbnailsURLs addObject:element.stringValue];
+            
+        }
+        
+    }
+    
+    return thumbnailsURLs;
+}
 @end

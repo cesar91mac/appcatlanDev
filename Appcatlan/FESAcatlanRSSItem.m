@@ -10,7 +10,7 @@
 
 @implementation FESAcatlanRSSItem
 
--(instancetype)initWithTitle:(NSString *)title Description:(NSString *)description Content:(NSString *)content Link:(NSString *)link PubDate:(NSString *)pubDate{
+-(instancetype)initWithTitle:(NSString *)title Description:(NSString *)description Content:(NSString *)content Link:(NSString *)link PubDate:(NSString *)pubDate AndThumbnailsURLs:(NSArray*)thumbnailsURLs{
     
     if (self = [super init]) {
         
@@ -23,6 +23,8 @@
         _link = link;
         
         _pubDate = pubDate;
+        
+        _thumbnailsURLs = thumbnailsURLs;
         
         return self;
     }

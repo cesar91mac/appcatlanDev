@@ -28,6 +28,7 @@
 		833C352C189B115D00E82B1E /* FeedItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C352B189B115D00E82B1E /* FeedItemsViewController.m */; };
 		833C352F189B1F8000E82B1E /* AreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833C352E189B1F8000E82B1E /* AreaCell.m */; };
 		833C3531189B2B4B00E82B1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C3530189B2B4B00E82B1E /* MapKit.framework */; };
+		BA23642119009307003B2258 /* RSSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA23642019009307003B2258 /* RSSTableViewCell.m */; };
 		BA6B3D1C18F5844800BA84AB /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B3D1B18F5844800BA84AB /* GDataXMLNode.m */; };
 		BA7BC23118A06AED00A743CD /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC23018A06AED00A743CD /* MapViewController.m */; };
 		BA7BC23418A06E7700A743CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7BC23318A06E7700A743CD /* CoreLocation.framework */; };
@@ -76,6 +77,8 @@
 		833C352D189B1F8000E82B1E /* AreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaCell.h; sourceTree = "<group>"; };
 		833C352E189B1F8000E82B1E /* AreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaCell.m; sourceTree = "<group>"; };
 		833C3530189B2B4B00E82B1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BA23641F19009307003B2258 /* RSSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSTableViewCell.h; sourceTree = "<group>"; };
+		BA23642019009307003B2258 /* RSSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSTableViewCell.m; sourceTree = "<group>"; };
 		BA6B3D1A18F5844800BA84AB /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		BA6B3D1B18F5844800BA84AB /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		BA7BC22F18A06AED00A743CD /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				833C3527189B101F00E82B1E /* FeedCell.m */,
 				833C352D189B1F8000E82B1E /* AreaCell.h */,
 				833C352E189B1F8000E82B1E /* AreaCell.m */,
+				BA23641F19009307003B2258 /* RSSTableViewCell.h */,
+				BA23642019009307003B2258 /* RSSTableViewCell.m */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				BAE9525518BFFB2800188D36 /* TwitterHelper.m in Sources */,
 				BA84044C18F72BB1004D6294 /* FESAcatlanRSSHelper.m in Sources */,
 				BA6B3D1C18F5844800BA84AB /* GDataXMLNode.m in Sources */,
+				BA23642119009307003B2258 /* RSSTableViewCell.m in Sources */,
 				833C34FD189B00BA00E82B1E /* Appcatlan.xcdatamodeld in Sources */,
 				833C34F6189B00BA00E82B1E /* main.m in Sources */,
 				BAA1608619006F720042ABA3 /* FESAcatlanRSSItem.m in Sources */,

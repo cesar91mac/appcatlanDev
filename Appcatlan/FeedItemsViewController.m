@@ -9,6 +9,7 @@
 #import "FeedItemsViewController.h"
 #import "FESAcatlanRSSHelper.h"
 #import "FESAcatlanRSSItem.h"
+#import "RSSTableViewCell.h"
 
 @interface FeedItemsViewController ()
 
@@ -60,17 +61,17 @@
     return self.rssItems.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *CellIdentifier = @"RSSCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    RSSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     FESAcatlanRSSItem *rssItemAtIndex = [self.rssItems objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = rssItemAtIndex.title;
+    cell.title.text = rssItemAtIndex.title;
     
-    cell.detailTextLabel.text = rssItemAtIndex.pubDate;
+    
     
     // Configure the cell...
     

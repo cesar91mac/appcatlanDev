@@ -20,9 +20,9 @@
 
 @property (nonatomic, strong) NSString *pubDate;
 
+@property (nonatomic, strong) NSArray *thumbnailsURLs;
 
-
--(instancetype)initWithTitle:(NSString *)title Description:(NSString *)description Content:(NSString *)content Link:(NSString *)link PubDate:(NSString *)pubDate;
+-(instancetype)initWithTitle:(NSString *)title Description:(NSString *)description Content:(NSString *)content Link:(NSString *)link PubDate:(NSString *)pubDate AndThumbnailsURLs:(NSArray*)thumbnailsURLs;
 
 
 @end
